@@ -5,6 +5,126 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Teko:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Splide Sliders -->
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <div class="container">
+        <img
+          class="header__logo"
+          src="./public/career108-logo.webp"
+          alt="Career 108 - Educational NGO since 2014"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <video src=""></video>
+        <div class="container hero__container">
+          <h1 class="hero__title">your class 12 success partner</h1>
+          <h2 class="hero__sub-title">
+            Get help in Subject Revision, Exam Preparation, Sample Paper Solving and many more from
+            India&apos;s only Career Guidance WhatsApp Chatbot.
+          </h2>
+          <a href="#" class="btn bta--cta">Say "Hello" to Chatbot</a>
+          <p class="hero__cta-note">No additional application needed to install</p>
+
+          <h3 class="hero__social-proof">10K+ Questions Answered by the Chatbot</h3>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <div class="feature">
+            <img src="" alt="Exam preparation" />
+            <h2 class="feature__title">class 12 exam preparation</h2>
+          </div>
+
+          <div class="feature">
+            <img src="" alt="Exam preparation" />
+            <h2 class="feature__title">career guidance</h2>
+          </div>
+
+          <div class="feature">
+            <img src="" alt="Exam preparation" />
+            <h2 class="feature__title">class 12 result</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <div class="container">
+          <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="./public/exams.png" alt="Test" /></li>
+                <li class="splide__slide"><img src="./public/results.png" alt="Test" /></li>
+                <li class="splide__slide">
+                  <img src="./public/career-guidance.png" alt="Test" />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="faqs">
+        <div class="container">
+          <h2 class="faqs__title">frequently asked Questions</h2>
+          <ul class="faqs__list">
+            <li class="faqs__item">
+              <h3 class="faqs__question">Is the Chatbot trust worthy?</h3>
+              <p class="faqs__answer">Yes of course it is. At the end it is a Chatbot.</p>
+            </li>
+            <li class="faqs__item">
+              <h3 class="faqs__question">Is the Chatbot trust worthy?</h3>
+              <p class="faqs__answer">Yes of course it is. At the end it is a Chatbot.</p>
+            </li>
+            <li class="faqs__item">
+              <h3 class="faqs__question">Is the Chatbot trust worthy?</h3>
+              <p class="faqs__answer">Yes of course it is. At the end it is a Chatbot.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer__text">
+          <h2 class="footer__title">
+            start conversation with<br />
+            the chatbot now
+          </h2>
+          <a href="#" class="btn bta--cta">Say "Hello" to Chatbot</a>
+          <p>or</p>
+          <p class="footer__whatsapp-number">
+            Send "Hello" to <br />
+            <span class="highlight">+91 990 9990 741</span> on WhatsApp
+          </p>
+        </div>
+
+        <img src="./public/hidden.png" alt="" />
+      </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
