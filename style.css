@@ -161,7 +161,7 @@ header {
 }
 
 .benefit__img {
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   margin-inline: auto;
 }
@@ -189,4 +189,59 @@ header {
 
 .splide__pagination__page.is-active {
   background-color: #1471c8;
+}
+
+/* FAQs Section */
+
+.faqs {
+  padding-block: 4rem;
+  background-color: white;
+}
+
+.faqs__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin-block-end: 1em;
+}
+
+.faqs__list {
+  max-width: 75ch;
+  list-style: none;
+  margin-inline: auto;
+}
+
+.faqs__item {
+  border-bottom: 3px solid black;
+}
+.faqs__item[aria-expanded="true"] {
+  border: 3px solid black;
+  padding: 1em 1.5em;
+}
+.faqs__item[aria-expanded="true"] .faqs__answer {
+  max-height: 100%;
+}
+
+.faqs__item:not(:last-of-type) {
+  margin-block-end: 2rem;
+}
+
+.faqs__question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-block-end: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+.faqs__question::after {
+  content: "+";
+  font-size: 1.5em;
+  line-height: 1;
+  transition: rotate 1s ease-out;
+}
+
+.faqs__answer {
+  max-height: 0;
+  overflow: hidden;
 }
