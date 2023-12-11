@@ -214,13 +214,11 @@ header {
 
 .faqs__item {
   border-bottom: 3px solid black;
+  transition: padding 1s;
 }
 .faqs__item[aria-expanded="true"] {
   border: 3px solid black;
   padding: 1em 1.5em;
-}
-.faqs__item[aria-expanded="true"] .faqs__answer {
-  max-height: 100%;
 }
 
 .faqs__item:not(:last-of-type) {
@@ -233,6 +231,7 @@ header {
   margin-block-end: 0.5em;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .faqs__question::after {
   content: "+";
@@ -241,7 +240,20 @@ header {
   transition: rotate 1s ease-out;
 }
 
+.faqs__item[aria-expanded="true"] .faqs__question::after {
+  rotate: -225deg;
+}
+
 .faqs__answer {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 1s;
+}
+
+.faqs__answer > p {
   overflow: hidden;
+}
+
+.faqs__item[aria-expanded="true"] .faqs__answer {
+  grid-template-rows: 1fr;
 }
