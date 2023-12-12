@@ -178,6 +178,10 @@ header {
   background-color: hsl(209, 82%, 80%);
 }
 
+.splide__pagination {
+  position: static;
+}
+
 .splide__pagination__page {
   background-color: hsl(209, 82%, 80%);
 }
@@ -199,6 +203,7 @@ header {
   font-weight: 700;
   text-align: center;
   margin-block-end: 1em;
+  line-height: 1.1;
 }
 
 .faqs__list {
@@ -258,13 +263,13 @@ header {
 footer {
   background-color: white;
   padding-block: 2rem;
+}
 
-  .container {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
+footer .container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .footer__title {
@@ -304,5 +309,17 @@ footer {
   .features .container {
     align-items: center;
     flex-direction: column;
+  }
+
+  .benefit {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit__img {
+    width: 100%;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr;
   }
 }
