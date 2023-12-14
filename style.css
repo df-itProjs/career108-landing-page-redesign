@@ -83,8 +83,19 @@ header {
 }
 
 .hero__container {
-  max-width: 500px;
+  /* max-width: 500px; */
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
   margin-inline: 0;
+}
+
+.hero__img {
+  max-width: 700px;
+}
+
+.hero__text-content {
+  max-width: 500px;
 }
 
 .hero__title {
@@ -111,6 +122,17 @@ header {
 }
 .hero__social-proof strong {
   font-weight: 700;
+}
+
+.qr-codes {
+  display: flex;
+  gap: 1rem;
+  margin-block-start: 2rem;
+  justify-content: center;
+}
+
+.qr-codes img {
+  max-width: 150px;
 }
 
 /* Features Section */
