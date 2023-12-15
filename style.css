@@ -52,8 +52,8 @@ a.btn {
 }
 .btn--cta:hover,
 .btn:focus-within {
-  box-shadow: 0 0 10rem -5rem var(--clr-accent), 2rem 0 10rem -5rem var(--clr-accent),
-    -2rem 0 10rem -5rem var(--clr-accent);
+  box-shadow: 0 0 10rem -5rem var(--clr-accent), 2rem 0 10rem -1rem var(--clr-accent),
+    -2rem 0 10rem -1rem var(--clr-accent);
 }
 
 .container {
@@ -142,9 +142,7 @@ header {
 }
 
 .hero__video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  display: none;
 }
 
 .hero__cta-note {
@@ -172,9 +170,13 @@ header {
 
 /* Features Section */
 .features {
+  --border-color: #8000001d;
+
   background-color: white;
   padding-block: 5rem;
   text-align: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .features .container {
@@ -222,7 +224,8 @@ header {
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 700;
-  margin-block-end: 0.5em;
+  margin-block-end: 1em;
+  line-height: 1.2;
 }
 
 /* Splide Styles */
@@ -363,6 +366,21 @@ footer .container {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    padding-block: 0;
+  }
+
+  .hero__container {
+    flex-direction: column;
+  }
+
+  .hero__video {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
   .hero__title {
     font-size: 5.5rem;
   }
