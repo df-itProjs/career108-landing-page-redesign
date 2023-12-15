@@ -33,7 +33,17 @@ a.btn {
   font-weight: 700;
   border-radius: 500px;
   padding: 0.8em 1.2em;
-  text-align: center;
+  text-align: left;
+  line-height: 1;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__img {
+  max-width: 2rem;
 }
 
 .btn--cta {
@@ -42,8 +52,8 @@ a.btn {
 }
 .btn--cta:hover,
 .btn:focus-within {
-  box-shadow: 0 0 10rem -0.5rem var(--clr-accent), 2rem 0 10rem -0.5rem var(--clr-accent),
-    -2rem 0 10rem -0.5rem var(--clr-accent);
+  box-shadow: 0 0 10rem -5rem var(--clr-accent), 2rem 0 10rem -5rem var(--clr-accent),
+    -2rem 0 10rem -5rem var(--clr-accent);
 }
 
 .container {
@@ -80,7 +90,7 @@ header {
 .hero {
   /* background-color: rgba(255, 0, 0, 0.729); */
   padding-block: 2rem;
-  min-height: calc(100dvh - 100px);
+  /* min-height: calc(100dvh - 100px); */
 }
 
 .hero__container {
@@ -323,7 +333,7 @@ footer .container {
   font-size: 3rem;
   text-transform: uppercase;
   line-height: 0.8;
-  font-family: var(--ff-heading);
+  font-family: "Teko", sans-serif;
   margin-block-end: 1em;
 }
 
@@ -353,6 +363,10 @@ footer .container {
 }
 
 @media (max-width: 900px) {
+  .hero__title {
+    font-size: 5.5rem;
+  }
+
   .bg-video {
     display: none;
   }
