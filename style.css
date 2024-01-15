@@ -33,6 +33,17 @@ body {
   font-family: var(--ff-primary);
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--clr-accent);
+  background: var(--clr-neutral);
+}
+
+::selection {
+  color: var(--clr-accent);
+  background: var(--clr-neutral);
+}
+
 /* Utility Classes */
 
 em[class] {
@@ -125,18 +136,11 @@ a.cta::after {
 
 .hero-title .underline {
   white-space: nowrap;
-  position: relative;
-}
-.hero-title .underline::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 1rem;
-  background-image: url("./assets/stroke-img.png");
-  background-size: contain;
+  background-image: url("./assets/stroke-img.webp");
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  padding-block-end: 1rem;
 }
 
 .hero-img {
@@ -152,7 +156,7 @@ a.cta::after {
 }
 
 em.note {
-  margin-block: 0.5em;
+  margin-block-start: 0.5em;
   font-style: italic;
   color: var(--clr-neutral-300);
   display: inline-block;
@@ -171,5 +175,36 @@ em.note {
 }
 
 .social-links__img {
-  width: 2.75rem;
+  width: 2rem;
+}
+
+@media (min-width: 1000px) {
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-sub-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  a.cta {
+    font-size: 3.5rem;
+  }
+
+  footer {
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+
+  .social-links {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
