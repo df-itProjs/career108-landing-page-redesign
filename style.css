@@ -1,7 +1,175 @@
+:root {
+  --clr-primary: #1d1d1d;
+  --clr-accent: #46cc6b;
+
+  --clr-neutral: #fff;
+  --clr-neutral-300: #a2a2a2;
+
+  --ff-primary: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ff-heading: "Mulish", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Reset */
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+
+  font-family: var(--ff-primary);
+}
+
+/* Utility Classes */
+
+em[class] {
+  font-style: normal;
+}
+em.bold {
+  font-weight: 600;
+}
+em.extrabold {
+  font-weight: 800;
+}
+em.highlight {
+  color: var(--clr-accent);
+}
+
+.container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+}
+
+a.cta {
+  --button-color: var(--clr-accent);
+
+  text-decoration: none;
+  color: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--button-color);
+  font-size: 2.2rem;
+  font-weight: 800;
+  padding: 0.5em;
+  margin-block: 1.2em;
+  position: relative;
+}
+
+a.cta::before {
+  content: "";
+  position: absolute;
+  right: clamp(100% + 0.8rem, 100% + 2vw, 100% + 1.2rem);
+  height: 100%;
+  width: 5vw;
+  background-color: var(--button-color);
+}
+
+a.cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--button-color);
+  z-index: -1;
+  animation: btnBgHighlight 1s ease infinite;
+}
+
+@keyframes btnBgHighlight {
+  from {
+    scale: 1 1;
+    opacity: 1;
+  }
+  to {
+    scale: 1.2 1.5;
+    opacity: 0;
+  }
+}
+
+.whatsapp-img {
+  width: 7.25rem;
+}
+
+/* Header Styles */
+
+.header {
+  font-family: var(--ff-heading);
+  border-bottom: 0.6rem solid var(--clr-accent);
+  padding-block: 1.5em;
+}
+
+.page-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+/* Main styles */
+
+.hero-title {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-block: 1em;
+}
+
+.hero-title .underline {
+  white-space: nowrap;
+  position: relative;
+}
+.hero-title .underline::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  background-image: url("./assets/stroke-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-img {
+  float: right;
+  width: min(50%, 600px);
+  shape-outside: polygon(-1px -8px, -0.14% 51.73%, 30.11% 48.79%, 54.65% 101.18%, 98.55% 101.71%);
+  shape-margin: 2rem;
+  margin-left: 1rem;
+}
+
+.chatbot-features {
+  line-height: 1.5;
+}
+
+em.note {
+  margin-block: 0.5em;
+  font-style: italic;
+  color: var(--clr-neutral-300);
+  display: inline-block;
+}
+
+/* Social Links Styles */
+
+.social-links {
+  background-color: var(--clr-accent);
+  display: inline-flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block-start: 1rem;
+}
+
+.social-links__img {
+  width: 2.75rem;
 }
