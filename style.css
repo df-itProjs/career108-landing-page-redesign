@@ -80,7 +80,7 @@ a.cta {
   font-size: 1.7rem;
   font-weight: 600;
   padding: 0.5em;
-  margin-block: 0.7em 1.2em;
+  margin-block: 0.5em 1.2em;
   position: relative;
 }
 
@@ -127,7 +127,7 @@ a.cta::after {
 .header {
   font-family: var(--ff-heading);
   border-bottom: 0.4rem solid var(--clr-accent);
-  padding-block: 1.5em;
+  padding-block: 0.9em;
 }
 
 .page-title {
@@ -135,16 +135,20 @@ a.cta::after {
   text-transform: uppercase;
 }
 
+.page-sub-title {
+  display: none;
+}
+
 /* Main styles */
 
 .hero-title {
   font-weight: 400;
   font-size: 1.7rem;
-  margin-block: 1em;
+  margin-block: 0.5em;
 }
 
 .hero-title .small {
-  font-size: 1.68rem;
+  font-size: 1.2rem;
 }
 
 .hero-title .bold {
@@ -173,11 +177,28 @@ a.cta::after {
   line-height: 1.5;
 }
 
+.other-features {
+  line-height: 1.6;
+}
+
 em.note {
   margin-block-start: 0.5em;
   font-style: italic;
   color: var(--clr-neutral-300);
   display: inline-block;
+}
+
+.help-list {
+  list-style-type: none;
+  margin-block: 0.3em;
+}
+
+.help-list li::before {
+  content: "➤ ";
+  display: inline-block;
+  margin-inline-end: 0.4em;
+  margin-block: 0.2em;
+  color: var(--clr-accent);
 }
 
 /* Social Links Styles */
@@ -205,6 +226,7 @@ em.note {
 
   .page-sub-title {
     font-size: 1.2rem;
+    display: block;
   }
 
   .hero-title {
@@ -229,6 +251,10 @@ em.note {
 
   .whatsapp-img {
     width: 8.5rem;
+  }
+
+  .chatbot-help {
+    font-size: 1.4rem;
   }
 
   footer {
