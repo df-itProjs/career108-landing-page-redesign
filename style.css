@@ -182,7 +182,7 @@ a.cta::after {
 }
 
 em.note {
-  margin-block-start: 0.5em;
+  margin-block: 0.5em 1em;
   font-style: italic;
   color: var(--clr-neutral-300);
   display: inline-block;
@@ -201,16 +201,20 @@ em.note {
   color: var(--clr-accent);
 }
 
+.help-img {
+  display: none;
+}
+
 /* Social Links Styles */
 
 .social-links {
   background-color: var(--clr-accent);
-  display: inline-flex;
+  display: flex;
   gap: 2rem;
   padding: 1rem 2rem;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin-block-start: 1rem;
+  /* margin-block-start: 1rem; */
 }
 
 .social-links__img {
@@ -278,5 +282,9 @@ em.note {
 @media (max-width: 600px) {
   .hero-img {
     display: none;
+  }
+
+  .help-img {
+    display: block;
   }
 }
